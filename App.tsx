@@ -4,17 +4,17 @@
  *
  * @format
  */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
+import Navigator from './src/navigators';
+import { useAuth } from './src/hooks';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useAuth((state: any) => state.switchs);
 
   return (
     <View style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+      <Navigator />
     </View>
   );
 }

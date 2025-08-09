@@ -1,97 +1,82 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# TodoApp
 
-# Getting Started
+A cross-platform Todo application built with React Native.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- User authentication (sign in, sign out)
+- Dashboard for managing todo tasks
+- Upcoming tasks screen
+- Settings screen (theme, app icon, privacy, help center, logout)
+- Modal for adding and editing tasks
+- Theming and dark mode support
+- Custom SVG icons and assets
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Project Structure
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- `App.tsx` - Main entry point
+- `src/component/` - Reusable UI components (e.g., Header, Input)
+- `src/hooks/` - Custom hooks for authentication and todo state
+- `src/screens/` - App screens:
+  - `dashboardscreen.tsx` - Main dashboard for todos
+  - `upcomingscreen.tsx` - Upcoming tasks and user info
+  - `settingsscreen.tsx` - Settings and preferences
+  - `themescreen.tsx` - Theme selection
+  - `appiconscreen.tsx` - App icon selection
+  - `modalscreen.tsx` - Modal for adding/editing tasks
+  - `helpcenter.tsx` - Help and support
+  - `accountscreen.tsx` - Account details
 
-```sh
-# Using npm
-npm start
+## Usage
 
-# OR using Yarn
-yarn start
-```
+1. Install dependencies:
 
-## Step 2: Build and run your app
+   ```sh
+   npm install
+   ```
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+2. Run the app:
 
-### Android
+   ```sh
+   npx react-native run-android
+   # or
+   npx react-native run-ios
+   ```
 
-```sh
-# Using npm
-npm run android
+## Customization
 
-# OR using Yarn
-yarn android
-```
+- Change themes and app icons from the Settings screen.
+- Add, edit, and view todos from the Dashboard and Modal screens.
+- Access help and privacy policy from the Settings screen.
 
-### iOS
+## Screenshots
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### Dashboard Screen
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+![Dashboard](/src/assets/screenshot/02.jpg)
+![Dashboard](/src/assets/screenshot/08.jpg)
 
-```sh
-bundle install
-```
+### Upcoming Tasks Screen
 
-Then, and every time you update your native dependencies, run:
+![Upcoming](/src/assets/screenshot/01.jpg)
+![Upcoming](/src/assets/screenshot/09.jpg)
 
-```sh
-bundle exec pod install
-```
+### Settings Screen
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+![Settings](src/assets/screenshot/12.jpg)
+![Settings](src/assets/screenshot/11.jpg)
 
-```sh
-# Using npm
-npm run ios
+### Modal
 
-# OR using Yarn
-yarn ios
-```
+![Settings](src/assets/screenshot/07.jpg)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Account Screen
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+![Settings](src/assets/screenshot/10.jpg)
+![Settings](src/assets/screenshot/04.jpg)
+![Settings](src/assets/screenshot/06.jpg)
+![Settings](src/assets/screenshot/03.jpg)
 
-## Step 3: Modify your app
+## License
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+MIT
