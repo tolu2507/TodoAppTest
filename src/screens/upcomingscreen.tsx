@@ -23,7 +23,6 @@ const Card = ({ item }: { item: Todo }) => {
                 height: 20,
                 borderWidth: 1,
                 borderColor: '#eee',
-                // backgroundColor: 'white',
                 borderRadius: 30,
               }}
             />
@@ -55,7 +54,6 @@ const Card = ({ item }: { item: Todo }) => {
 };
 
 export default function UpcomingScreen({ navigation }: { navigation: any }) {
-  // const user: User = useAuth((state: any) => state.token);
   const switchs = useAuth((state: any) => state.switchs);
   const data: Todo[] = useTodo((state: any) => state.todo);
   const update = useTodo((state: any) => state.updateTodos);

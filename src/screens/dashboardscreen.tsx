@@ -103,7 +103,20 @@ const Card = ({ item, navigation }: { item: Todo; navigation: any }) => (
       }}
     >
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-        <Plus />
+        <View
+          style={{ backgroundColor: '#24a19c', padding: 8, borderRadius: 6 }}
+        >
+          <Text
+            style={[
+              styles.text,
+              { fontWeight: '800', marginBottom: 0, color: 'white' },
+            ]}
+            allowFontScaling={true}
+            adjustsFontSizeToFit={true}
+          >
+            {item.id}
+          </Text>
+        </View>
         <Text
           style={[styles.text, { fontWeight: '800', marginBottom: 0 }]}
           allowFontScaling={true}
@@ -112,13 +125,6 @@ const Card = ({ item, navigation }: { item: Todo; navigation: any }) => (
           {item.todo}
         </Text>
       </View>
-      <Text
-        style={[styles.text, { fontWeight: '800', marginBottom: 0 }]}
-        allowFontScaling={true}
-        adjustsFontSizeToFit={true}
-      >
-        {item.id}
-      </Text>
       <View style={[styles.header]}>
         <Text
           allowFontScaling={true}

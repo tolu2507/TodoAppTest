@@ -38,9 +38,9 @@ A cross-platform Todo application built with React Native.
 2. Run the app:
 
    ```sh
-   npx react-native run-android
+   npm run android
    # or
-   npx react-native run-ios
+   npm run ios
    ```
 
 ## Design Choices & Assumptions

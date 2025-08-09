@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { PlatformPressable } from '@react-navigation/elements';
 import { KeyboardAvoidingView, Platform, StyleSheet, View } from 'react-native';
 import Send from '../assets/send.svg';
@@ -8,7 +7,6 @@ import { Todo, useAuth, User, useTodo } from '../hooks';
 
 export default function ModalScreen({ navigation }: { navigation: any }) {
   const data: Todo[] = useTodo((state: any) => state.todo);
-  const setTodo = useTodo((state: any) => state.updateTodo);
   const setAdd = useTodo((state: any) => state.add);
   const task: Todo = useTodo((state: any) => state.task);
   const setTask = useTodo((state: any) => state.updateTask);
