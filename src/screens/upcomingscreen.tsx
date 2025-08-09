@@ -11,10 +11,23 @@ import DatePicker from '../component/calenderheader';
 
 const Card = ({ item }: { item: Todo }) => {
   return (
-    <PlatformPressable onPress={() => {}} style={[styles.between, styles.b]}>
+    <View style={[styles.between, styles.b]}>
       <View style={{ gap: 10 }}>
         <View style={styles.row}>
-          <Select />
+          {item.completed ? (
+            <Select />
+          ) : (
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                borderWidth: 1,
+                borderColor: '#eee',
+                // backgroundColor: 'white',
+                borderRadius: 30,
+              }}
+            />
+          )}
           <Text
             style={[styles.textx, styles.j]}
             adjustsFontSizeToFit={true}
@@ -37,7 +50,7 @@ const Card = ({ item }: { item: Todo }) => {
       <View>
         <ThreeDots />
       </View>
-    </PlatformPressable>
+    </View>
   );
 };
 
@@ -45,13 +58,20 @@ export default function UpcomingScreen({ navigation }: { navigation: any }) {
   // const user: User = useAuth((state: any) => state.token);
   const switchs = useAuth((state: any) => state.switchs);
   const data: Todo[] = useTodo((state: any) => state.todo);
+  const update = useTodo((state: any) => state.updateTodos);
   return (
     <SafeAreaView
       style={[styles.container, switchs && { backgroundColor: 'black' }]}
     >
       <FlatList
         data={data}
-        renderItem={({ item }) => <Card item={item} />}
+        renderItem={({ item }) => (
+          <PlatformPressable
+            onPress={() => update(item.id, { completed: !item.completed })}
+          >
+            <Card item={item} />
+          </PlatformPressable>
+        )}
         keyExtractor={it => it.id + ''}
         ListHeaderComponent={
           <View style={styles.m}>

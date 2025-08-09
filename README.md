@@ -43,6 +43,14 @@ A cross-platform Todo application built with React Native.
    npx react-native run-ios
    ```
 
+## Design Choices & Assumptions
+
+- The app uses React Native for cross-platform compatibility.
+- State management is handled with Zustand for simplicity and performance.
+- Screens are separated for modularity and maintainability.
+- Assumes users will sign in before accessing todos.
+- Theming and icon customization are provided for better user experience.
+
 ## Customization
 
 - Change themes and app icons from the Settings screen.

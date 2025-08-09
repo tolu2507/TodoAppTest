@@ -93,6 +93,12 @@ export const useTodo = create(set => ({
   todo,
   task,
   updateTodo: (val: Todo[]) => set({ todo: val }),
+  updateTodos: (id: any, updates: Partial<Todo>) =>
+    set((state: any) => ({
+      todo: state.todo.map((item: any) =>
+        item.id === id ? { ...item, ...updates } : item,
+      ),
+    })),
   updateTask: (val: Todo) => set({ task: { ...task, ...val } }),
   add: async (todos: string, userId: number, val: Todo[]) => {
     const date = getRandomFutureDateTime(30);
